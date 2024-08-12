@@ -85,7 +85,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  printf("main begin...\n");
+  
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -118,7 +118,8 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
-
+  printf("main begin...\n");
+  cpp_main();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -126,7 +127,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    printf("loop...\n");
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

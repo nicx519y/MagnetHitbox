@@ -19,15 +19,16 @@
             "showDevDebugTimestamps": true,
             "preLaunchTask": "build task", //先运行Build任务编译项目,取消注释即可使用
             "svdFile": "${workspaceRoot}/STM32H750.svd",
-            "swoConfig": {
-                "enabled": true,
-                "cpuFrequency": 480000000,
-                "swoFrequency": 2000000,
-                "source": "probe",
-                "decoders": [
-                    { "type": "console", "label": "ITM", "port": 0 }
-                ]
-            }
+            // "swoConfig": {
+            //     "enabled": true,
+            //     "cpuFrequency": 480000000,
+            //     // "cpuFrequency": 1800000,
+            //     "swoFrequency": 2000000,
+            //     "source": "probe",
+            //     "decoders": [
+            //         { "type": "console", "label": "ITM", "port": 0 }
+            //     ]
+            // }
         }
     ]
 }

@@ -63,6 +63,18 @@ static void MPU_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+// // 重定向printf到swo
+// int _write(int file, char *ptr, int len)
+// {
+//   (void)file;
+//   int DataIdx;
+
+//   for (DataIdx = 0; DataIdx < len; DataIdx++)
+//   {
+//     ITM_SendChar(*ptr++);
+//   }
+//   return len;
+// }
 /* USER CODE END 0 */
 
 /**
@@ -73,7 +85,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  printf("main begin...\n");
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -114,7 +126,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    printf("start. my start.");
+    printf("loop...\n");
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -12,7 +12,7 @@
   * This software is licensed under terms that can be found in the LICENSE file
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
+  *c_cpp_properties.json
   ******************************************************************************
   */
 /* USER CODE END Header */
@@ -22,7 +22,6 @@
 #include "dma.h"
 #include "memorymap.h"
 #include "usart.h"
-#include "usb_otg.h"
 #include "gpio.h"
 #include <stdio.h>
 
@@ -63,18 +62,6 @@ static void MPU_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// // 重定向printf到swo
-// int _write(int file, char *ptr, int len)
-// {
-//   (void)file;
-//   int DataIdx;
-
-//   for (DataIdx = 0; DataIdx < len; DataIdx++)
-//   {
-//     ITM_SendChar(*ptr++);
-//   }
-//   return len;
-// }
 /* USER CODE END 0 */
 
 /**
@@ -116,17 +103,20 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_USART1_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
   printf("main begin...\n");
   cpp_main();
+
+   
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

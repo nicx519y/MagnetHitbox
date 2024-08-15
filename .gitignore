@@ -1,0 +1,8 @@
+# 忽略 specific_folder 目录 
+build/ 
+
+# 忽略 specific_file.txt 文件 
+# specific_file.txt 
+
+# 忽略所有 .log 文件 
+# *.log 

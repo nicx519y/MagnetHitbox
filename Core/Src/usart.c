@@ -25,7 +25,7 @@
 // printf重定向到串口输出
 
 #ifdef __GNUC__
-  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)/*char类型是以int类型存储的，所以可以用int*/
+  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)/*char类型是以int类型存储的，�??以可以用int*/
 #else
   #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif /* __GNUC__ */

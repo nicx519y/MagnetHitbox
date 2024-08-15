@@ -2,22 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "STlink",
+            "name": "Debug On STlink",
             "cwd": "${workspaceRoot}/",
-            "executable": "${workspaceRoot}\\build\\LrndisTest.elf",
+            "executable": "./build/${workspaceRootFolderName}.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd", //要选择的GDB server
             "device": "STM32H750",
             "interface": "swd",
-            "gdbPath": "D:\\Program Files (x86)\\Vscode Tools\\arm-none-eabi-13-3\\bin\\arm-none-eabi-gdb.exe",
+            "gdbPath": "D:/Program Files (x86)/Vscode Tools/arm-none-eabi-13-3/bin/arm-none-eabi-gdb.exe",
             "configFiles": [
                 "interface/stlink.cfg",
                 "target/stm32h7x.cfg",
             ],
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
             "runToEntryPoint": "main",
             "showDevDebugTimestamps": true,
-            "preLaunchTask": "build task", //先运行Build任务编译项目,取消注释即可使用
+            "preLaunchTask": "flash", //先运行Build任务编译项目,取消注释即可使用
             "svdFile": "${workspaceRoot}/STM32H750.svd",
             // "swoConfig": {
             //     "enabled": true,
